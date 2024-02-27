@@ -1,0 +1,152 @@
+{
+    "code-runner.executorMapByGlob": {
+        "*.mx3": "amumax -f"
+    },
+    "code-runner.runInTerminal": true,
+    "code-runner.enableAppInsights": false,
+    "workbench.colorTheme": "Dracula",
+    "editor.fontSize": 15,
+    "notebook.output.textLineLimit": 300,
+    "notebook.consolidatedRunButton": true,
+    "notebook.globalToolbarShowLabel": "never",
+    "notebook.insertToolbarLocation": "betweenCells",
+    "jupyter.stopOnError": false,
+    "editor.wordWrap": "on",
+    "go.toolsManagement.autoUpdate": true,
+    "[go]": {
+        "editor.insertSpaces": false,
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        },
+        "editor.suggest.snippetsPreventQuickSuggestions": false
+    },
+    "editor.showFoldingControls": "always",
+    "notebook.showFoldingControls": "always",
+    "editor.foldingImportsByDefault": true,
+    "editor.cursorSurroundingLines": 10,
+    "python.languageServer": "Jedi",
+    "files.autoSave": "onFocusChange",
+    "editor.fontFamily": "FiraCode Nerd Font Mono",
+    "editor.fontLigatures": true,
+    "editor.suggest.insertMode": "replace",
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.hidesExplorerArrows": true,
+    "material-icon-theme.activeIconPack": "react",
+    "material-icon-theme.files.associations": {
+        "*.zarr": "Database",
+        "*.logs": "Yaml",
+        "gui": "3d",
+        ".z": "Log",
+        ".zhistory": "Log",
+        ".zshrc_local": "Console",
+        "table.txt": "Table"
+    },
+    "material-icon-theme.folders.associations": {
+        "figs": "Images",
+        ".config": "Config",
+        ".ssh": "Client",
+        ".local": "Config",
+        "gh": "Github",
+        "dotfiles": "Controller",
+        "dl": "Download"
+    },
+    "explorer.confirmDragAndDrop": false,
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    "git.ignoreMissingGitWarning": true,
+    "files.associations": {
+        "*.mx3": "go",
+        "*.html": "html",
+        "mplstyle": "python",
+        "*.mplstyle": "plaintext",
+        ".zattrs": "json",
+        ".zgroup": "json",
+        ".zarray": "json",
+        "*.desktop": "ini"
+    },
+    "workbench.startupEditor": "newUntitledFile",
+    "search.exclude": {
+        "**/__pycache__": true,
+        "**/.mypy_cache": true
+    },
+    "editor.wordWrapColumn": 120,
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/.ipynb_checkpoints": true,
+        "**/.pytest_cache": true,
+        "**/*.pyc": true,
+        "**/dask-worker-space": true,
+        "**/node_modules": true,
+        "**/references.bib": true,
+        "**/*.egg-info": true,
+        "**/.gnupg": true,
+        "**/.nv": true,
+        "**/.pki": true,
+        "**/.kde4": true,
+        "**/.vscode-server": true,
+        "**/.gtkrc-2.0": true,
+        "**/.lesshst": true,
+        "**/.Xauthority": true,
+        "**/.jupyter": true,
+        "**/.ipython": true,
+        "**/.vscode": true,
+        "**/.z": true,
+        "**/.mypy_cache": true,
+        "**/.virtual_documents": true,
+        "**/.Trash-1000": true
+    },
+    "extensions.ignoreRecommendations": true,
+    "diffEditor.wordWrap": "off",
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.formatting.provider": "black",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "editor.minimap.enabled": false,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#005f5f",
+        "statusBar.noFolderBackground": "#005f5f",
+        "statusBar.debuggingBackground": "#005f5f"
+    },
+    "files.watcherExclude": {
+        "**/*.ovf": true,
+        "**/*.out": true,
+        "**/*.zarr": true
+    },
+    "notebook.cellToolbarVisibility": "hover",
+    "notebook.consolidatedOutputButton": false,
+    "notebook.diff.ignoreMetadata": true,
+    "notebook.diff.ignoreOutputs": true,
+    "notebook.navigation.allowNavigateToSurroundingCells": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.suggest.preview": true,
+    "breadcrumbs.enabled": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.quickSuggestions": {
+        "comments": "on",
+        "strings": "on",
+        "other": "on"
+    },
+    "editor.guides.bracketPairs": true,
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "git.decorations.enabled": false,
+    "python.defaultInterpreterPath": "/bin/python",
+    "workbench.panel.defaultLocation": "right",
+    "git.ignoreLegacyWarning": true,
+    "scm.diffDecorations": "none",
+    "jupyter.allowUnauthorizedRemoteConnection": true,
+    "editor.formatOnSave": true,
+    "notebook.breadcrumbs.showCodeCells": false,
+    "window.title": "VSCode",
+    "jupyter.interactiveWindow.textEditor.autoAddNewCell": false,
+    "jupyter.interactiveWindow.codeLens.commands": "jupyter.runcell, jupyter.runallcellsabove",
+    "workbench.editor.empty.hint": "hidden",
+    "mx3.path": "amumax"
+}

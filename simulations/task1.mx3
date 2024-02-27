@@ -1,0 +1,68 @@
+// Documentation available at https://mumax.github.io/api.html
+
+dx = 4e-9 // cell size in x direction
+dy = 4e-9 // cell size in y direction
+dz = 5e-9 // cell size in z direction
+
+Tx = 200e-09 // Total size of the system in x direction
+Ty = 300e-09 // Total size of the system in y direction
+Tz = 5e-09 // Total size of the system in z direction (thickness)
+
+// Nx = Tx/dx // number of cells in x direction, it is implicit
+// Ny = Ty/dy // number of cells in y direction, it is implicit
+// Nz = Tz/dz // number of cells in z direction, it is implicit
+
+// universe() selects all the cells, so here we have magnetic
+// material everywhere
+setgeom(universe())
+
+// save the magnetization of the system as a png image
+// "m" is the magnetization
+// "m_initial.png" is the name of the file
+snapshotas(m,"m_initial.png")
+
+// Save the magnetization as an array (vector field) so we can have a look in python
+saveas(m,"m_initial")
+
+// material parameters for Permalloy (Ni80Fe20)
+
+// Saturation magnetization = the strength of the magnetic field created by the material
+Msat = 800e03 
+// Exchange stiffness = how likely the spins are to align with each other
+Aex = 13e-12 
+
+// external magnetic field and initial magnetic configuration
+B_ext = vector(0, 0, 0)
+
+// The state of the system is artificial and we need to relax it to find the energy minimum
+// runs the LLG equation until an energy minimum is found
+relax()
+
+snapshotas(m,"m_relaxed.png")
+saveas(m,"m_relaxed.png")
+
+///////////////////////////////////////////////////////
+//////////////////// TASK 1 ///////////////////////////
+///////////////////////////////////////////////////////
+// For each B_ext you will :
+// 		- set the starting magnetization state, fully along the x axis
+// 		- apply the external magnetic field 
+// 		- relax the system 
+// 		- save a png image the magnetization with the name `m_a.png` for a), `m_b.png` for b) and so on.
+// 		- save the magnetization as a dataset with the name `m_a` for a), `m_b` for b) and so on.
+
+// Task 1 - a) 
+B_ext = vector(0, 0, 0)
+// ...
+
+// Task 1 - b) 
+B_ext = vector(0, 1, 0)
+// ...
+
+// Task 1 - c) 
+B_ext = vector(0, 0, 0.5)
+// ...
+
+// Task 1 - d) 
+B_ext = vector(0, 0, 1)
+// ...

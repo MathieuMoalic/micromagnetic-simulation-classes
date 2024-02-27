@@ -1,0 +1,57 @@
+// Documentation available at https://mumax.github.io/api.html
+
+dx = 4e-9 // cell size in x direction
+dy = 4e-9 // cell size in y direction
+dz = 5e-9 // cell size in z direction
+
+Tx = 200e-09 // Total size of the system in x direction
+Ty = 300e-09 // Total size of the system in y direction
+Tz = 5e-09 // Total size of the system in z direction (thickness)
+
+// Nx = Tx/dx // number of cells in x direction, it is implicit
+// Ny = Ty/dy // number of cells in y direction, it is implicit
+// Nz = Tz/dz // number of cells in z direction, it is implicit
+
+// universe() selects all the cells, so here we have magnetic
+// material everywhere
+setgeom(universe())
+
+// save the magnetization of the system as a png image
+// "m" is the magnetization
+// "m_initial.png" is the name of the file
+snapshotas(m,"m_initial.png")
+
+// Save the magnetization as an array (vector field) so we can have a look in python
+saveas(m,"m_initial")
+
+// material parameters for Permalloy (Ni80Fe20)
+
+// Saturation magnetization = the strength of the magnetic field created by the material
+Msat = 800e03 
+// Exchange stiffness = how likely the spins are to align with each other
+Aex = 13e-12 
+
+// Hysteresis
+
+// Save the average value of the external field in the table
+TableAdd(B_ext)
+
+// hysteresis loop parameters
+Bmax := 1.0 // maximum external magnetic field
+Bmin := -1.0 // minimum external magnetic field
+B_step := 0.02 // step in the external magnetic field
+
+// first from 0 field to Bmax
+for B := 0.0; B <= Bmax; B += B_step {
+	B_ext = vector(B,0,0)
+	print(B_ext)
+	relax()
+	tablesave()
+	save(m)
+}
+
+// then from Bmax to Bmin
+// ...
+
+// then from Bmin to Bmax
+// ...
