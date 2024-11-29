@@ -39,7 +39,7 @@ B_ext = vector(0, 0, 0)
 relax()
 
 snapshotas(m,"m_relaxed.png")
-saveas(m,"m_relaxed.png")
+saveas(m,"m_relaxed")
 
 ///////////////////////////////////////////////////////
 //////////////////// TASK 1 ///////////////////////////
